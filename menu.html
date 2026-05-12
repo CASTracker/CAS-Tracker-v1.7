@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAS Tracker - Panel Principal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="menu.html">CAS Tracker</a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="menu.html" aria-current="page">Inicio</a>
+        <a href="actividades.html">Actividades</a>
+        <a href="reflexiones.html">Reflexiones</a>
+        <a href="horario.html">Horario</a>
+        <a href="portafolio.html">Portafolio</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Cambiar tema">☾</button>
+        <button id="logoutBtn" class="btn ghost" type="button">Cerrar sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="totales">
+      <div class="section-top">
+        <div>
+          <p class="eyebrow">Resumen</p>
+          <h1>Horas CAS</h1>
+        </div>
+        <button class="btn" type="button" onclick="exportarDatos()">Exportar datos</button>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h2>Creatividad</h2>
+          <p id="totalC">0 horas</p>
+        </article>
+        <article class="card">
+          <h2>Actividad</h2>
+          <p id="totalA">0 horas</p>
+        </article>
+        <article class="card">
+          <h2>Servicio</h2>
+          <p id="totalS">0 horas</p>
+        </article>
+        <article class="card highlight">
+          <h2>Total General</h2>
+          <p id="totalGeneral">0 horas</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-top">
+        <div>
+          <p class="eyebrow">Diario CAS</p>
+          <h2>Últimas reflexiones</h2>
+        </div>
+        <a class="text-link" href="reflexiones.html">Ver todas</a>
+      </div>
+      <div id="previewReflexiones" class="lista-reflexiones empty-aware"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Creado por Alejandro Sánchez Alejo</p>
+  </footer>
+
+  <script type="module" src="./firebase-auth.js"></script>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
